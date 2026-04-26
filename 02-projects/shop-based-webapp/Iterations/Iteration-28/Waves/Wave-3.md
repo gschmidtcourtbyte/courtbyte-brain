@@ -47,3 +47,7 @@ Umsetzung 2026-04-26:
 Hotfix 2026-04-26:
 - Beide Founder-Bildbereiche in `warum-wir/page.tsx` nutzen nun denselben `aspect-[2/3]`-Frame.
 - Bilder bleiben `object-contain`, damit die gleich grossen Boxen ohne Crop/Zoom dargestellt werden.
+
+Hotfix 2 2026-04-26:
+- `warum-wir/page.tsx`: beide Founder-Bilder fuellen den gemeinsamen `aspect-[2/3]`-Frame mit `object-cover`.
+- Ariadna nutzt `object-bottom`, damit der notwendige Zuschnitt primaer oben statt unten erfolgt.

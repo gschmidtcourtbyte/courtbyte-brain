@@ -122,3 +122,10 @@ Hotfix 2026-04-26:
 - Bilder bleiben `object-contain`, damit kein Crop/Zoom zurueckkommt.
 - Customer-Web Tests: `npm test -- --configLoader runner` mit 10 Testdateien / 79 Tests gruen.
 - Customer-Web Build: `npm run build` erfolgreich.
+
+Hotfix 2 2026-04-26:
+- Ariadna/Sascha-Bilder in `AboutUs.tsx` und `warum-wir/page.tsx` fuellen nun denselben `aspect-[2/3]`-Frame mit `object-cover`.
+- Ariadna ist per `object-bottom` verankert, damit der notwendige Zuschnitt primaer oben passiert.
+- Diese Aenderung ist eine bewusste Ausnahme vom bisherigen `object-contain`, weil das neue Feedback gleiche sichtbare Bildgroesse priorisiert.
+- Customer-Web Tests: `npm test -- --configLoader runner` mit 10 Testdateien / 79 Tests gruen.
+- Customer-Web Build: `npm run build` erfolgreich.

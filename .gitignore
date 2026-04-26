@@ -1,0 +1,15 @@
+# Obsidian local state (nicht teilen)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+
+# LLM path config — gehört nie ins Git
+.vault
+
+# Trash
+.trash/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -5,14 +5,26 @@
 Lies `.vault` in diesem Repo-Root um den Vault-Pfad zu ermitteln.
 Planungsdateien liegen in: `{vault}/02-projects/{Projektname}/`
 
-### Session Start — immer in dieser Reihenfolge lesen
+### Coding Session — Wave ausführen
 
 1. `.vault` lesen → `{vault}` Pfad ermitteln
-2. `{vault}/02-projects/{Projektname}/Rules.md`
-3. `{vault}/02-projects/{Projektname}/Projektplan.md`
-4. `{vault}/02-projects/{Projektname}/Iterations/Iteration-N/Iteration-N.md`
-5. `{vault}/02-projects/{Projektname}/Iterations/Iteration-N/Waves/Wave-X.md`
-6. Skill aus der Wave-Datei aufrufen
+2. `{vault}/02-projects/{Projektname}/Rules.md` lesen
+3. `{vault}/02-projects/{Projektname}/Projektplan.md` lesen
+4. `{vault}/02-projects/{Projektname}/Iterations/Iteration-N/Iteration-N.md` lesen
+5. `{vault}/02-projects/{Projektname}/Iterations/Iteration-N/Waves/Wave-X.md` lesen
+6. Skill aus der Wave-Datei aufrufen (Claude: `/skill-name` / Codex: Rolle benennen)
+7. Tasks ausführen — nur Code-Repo-Dateien anfassen
+8. Nach Abschluss: Wave-X.md in der Vault abhaken
+
+### Planning Session — Iteration planen
+
+1. `.vault` lesen → `{vault}` Pfad ermitteln
+2. `{vault}/02-projects/{Projektname}/Projektplan.md` lesen
+3. Letzte abgeschlossene Iteration lesen
+4. Claude: `/product-own` aufrufen / Codex: *"Acting as Product Owner"*
+5. Plan mit User besprechen — erst dann Dateien schreiben
+6. Iteration-N.md und Wave-X.md in der Vault erstellen (nicht im Repo!)
+7. Vault committen und pushen nach Freigabe durch User
 
 ---
 

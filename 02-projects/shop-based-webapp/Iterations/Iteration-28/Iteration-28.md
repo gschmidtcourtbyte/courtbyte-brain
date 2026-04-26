@@ -116,3 +116,9 @@ Abschluss 2026-04-26:
 - Customer-Web Tests: `npm test -- --configLoader runner` mit 10 Testdateien / 79 Tests gruen.
 - Customer-Web Build: `npm run build` erfolgreich.
 - Browser-/Screenshot-Smoke lokal nicht ausgefuehrt: kein Playwright, Chromium oder Google Chrome im Projekt/Systempfad verfuegbar.
+
+Hotfix 2026-04-26:
+- Ariadna/Sascha-Bildbereiche in `AboutUs.tsx` und `warum-wir/page.tsx` auf gemeinsame `aspect-[2/3]`-Frames gestellt.
+- Bilder bleiben `object-contain`, damit kein Crop/Zoom zurueckkommt.
+- Customer-Web Tests: `npm test -- --configLoader runner` mit 10 Testdateien / 79 Tests gruen.
+- Customer-Web Build: `npm run build` erfolgreich.

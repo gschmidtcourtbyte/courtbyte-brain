@@ -42,3 +42,7 @@ Umsetzung 2026-04-26:
 - Ariadna und Sascha in `AboutUs.tsx` von `fill`/Aspect-Frame auf normales `Image` mit echten Bilddimensionen und `block h-auto w-full` umgestellt.
 - Keine `object-cover`, manuelle `object-[...]` Positionierung oder Scale-/Hover-Zoom-Klassen fuer diese Bilder.
 - Keine Bildassets geaendert.
+
+Hotfix 2026-04-26:
+- Beide Founder-Bildbereiche in `AboutUs.tsx` nutzen nun denselben `aspect-[2/3]`-Frame.
+- Bilder bleiben `object-contain`, damit die gleich grossen Boxen ohne Crop/Zoom dargestellt werden.

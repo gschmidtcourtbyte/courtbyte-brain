@@ -46,5 +46,5 @@ Hauptfeatures: Kontaktformular (Hansefit-Registrierung) + CMS für Baufortschrit
 
 ## Historische Planungsdateien
 
-Iterationen 1–20 liegen als Legacy in `plan/iterations/` im Repo.
-Ab Iteration 21 kommen alle Planungsdateien in diese Vault.
+Iterationen 1–20 wurden aus `plan/iterations/` in die Vault-Struktur `Iterations/Iteration-N/` migriert.
+Ab Iteration 21 werden alle neuen Planungsdateien direkt in dieser Vault gepflegt.

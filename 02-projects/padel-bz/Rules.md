@@ -44,6 +44,6 @@
 
 ## Was nicht ins Repo gehört
 
-- Keine Planungs-Markdowns (ab Iteration 21 — in Vault)
+- Keine Planungs-Markdowns im Code-Repo — Planung liegt in der Vault unter `02-projects/padel-bz/Iterations/`
 - Keine .env-Dateien (nur .env.example)
 - Keine .vault Datei

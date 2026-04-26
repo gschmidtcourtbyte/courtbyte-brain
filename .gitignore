@@ -4,6 +4,10 @@
 .obsidian/workspace.json.bak
 .obsidian/cache
 .obsidian/hotkeys.json
+.obsidian/graph.json
+
+# LLM path config — gehört nie ins Git
+.vault
 
 # Obsidian-Mülleimer
 .trash/

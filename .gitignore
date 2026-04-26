@@ -1,0 +1,14 @@
+# Obsidian: per-machine UI state — nicht teilen
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+.obsidian/cache
+.obsidian/hotkeys.json
+
+# Obsidian-Mülleimer
+.trash/
+
+# OS-Müll
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,7 +1,7 @@
 # shop-based-webapp - Projektplan
 
 **Status:** In Progress
-**Letzte abgeschlossene Iteration:** 27
+**Letzte abgeschlossene Iteration:** 28
 **Repo:** /home/andersen/git/shop-based-webapp
 **GitHub:** git@github.com:Courtbyte/shop-based-webapp.git
 **Produkt:** EasyEdge Platform / OUT Padel Customer Web

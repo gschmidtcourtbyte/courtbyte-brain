@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Users/svenj/Desktop/Courtbyte/**)",
+      "Read(//mnt/c/Users/svenj/Desktop/**)"
+    ]
+  }
+}

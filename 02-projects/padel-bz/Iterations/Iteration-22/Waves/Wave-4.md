@@ -1,6 +1,6 @@
 # Wave 4: Tests und Regression
 
-**Status:** Planned
+**Status:** Completed
 **Skill:** testing-eng
 **Rolle:** testing-eng
 **Kann parallel ausgefuehrt werden:** nein
@@ -18,11 +18,11 @@ Das neue Prelaunch-Verhalten wird durch fokussierte Tests abgesichert: oeffentli
 **Agent:** Agent D (testing-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Tests belegen, dass `/kontakt` GET ohne Site-Passwort erlaubt ist.
-- [ ] Tests belegen, dass `/kontakt` POST ohne Site-Passwort erlaubt ist.
-- [ ] Tests belegen, dass `/agb`, `/datenschutz`, `/impressum` erlaubt sind.
-- [ ] Tests belegen, dass nicht erlaubte Pfade im Maintenance Mode die Coming-Soon-Seite erhalten.
-- [ ] Bestehende SiteAuth-Tests sind an das neue Produktverhalten angepasst.
+- [x] Tests belegen, dass `/kontakt` GET ohne Site-Passwort erlaubt ist.
+- [x] Tests belegen, dass `/kontakt` POST ohne Site-Passwort erlaubt ist.
+- [x] Tests belegen, dass `/agb`, `/datenschutz`, `/impressum` erlaubt sind.
+- [x] Tests belegen, dass nicht erlaubte Pfade im Maintenance Mode die Coming-Soon-Seite erhalten.
+- [x] Bestehende SiteAuth-Tests sind an das neue Produktverhalten angepasst.
 
 **Kontext:**
 - `internal/handler/site_auth_test.go`
@@ -37,10 +37,10 @@ Das neue Prelaunch-Verhalten wird durch fokussierte Tests abgesichert: oeffentli
 **Agent:** Agent D (testing-eng)
 
 **Akzeptanzkriterien:**
-- [ ] `agb.html` rendert und enthaelt gelieferte Kernbegriffe.
-- [ ] `datenschutz.html` rendert und enthaelt gelieferte Kernbegriffe.
-- [ ] `coming-soon.html` rendert im Maintenance-Kontext.
-- [ ] Der Aktionstext und der Aktionsbedingungen-Trigger sind im HTML vorhanden.
+- [x] `agb.html` rendert und enthaelt gelieferte Kernbegriffe.
+- [x] `datenschutz.html` rendert und enthaelt gelieferte Kernbegriffe.
+- [x] `coming-soon.html` rendert im Maintenance-Kontext.
+- [x] Der Aktionstext und der Aktionsbedingungen-Trigger sind im HTML vorhanden.
 
 **Kontext:**
 - `internal/handler/render_test.go`
@@ -55,11 +55,11 @@ Das neue Prelaunch-Verhalten wird durch fokussierte Tests abgesichert: oeffentli
 **Agent:** Agent D (testing-eng)
 
 **Akzeptanzkriterien:**
-- [ ] `go test ./...` ist gruen.
-- [ ] `git diff --check` ist gruen.
-- [ ] Kontaktformular-Validierung fuer Hansefit bleibt gruen.
-- [ ] CSRF- und Rate-Limiting-Pfade werden nicht deaktiviert.
-- [ ] Keine Template-Parse-Fehler.
+- [x] `go test ./...` ist gruen.
+- [x] `git diff --check` ist gruen.
+- [x] Kontaktformular-Validierung fuer Hansefit bleibt gruen.
+- [x] CSRF- und Rate-Limiting-Pfade werden nicht deaktiviert.
+- [x] Keine Template-Parse-Fehler.
 
 **Kontext:**
 - Gesamtes Code-Repo.
@@ -69,14 +69,19 @@ Das neue Prelaunch-Verhalten wird durch fokussierte Tests abgesichert: oeffentli
 
 ## Wave-4-Exit-Gate
 
-- [ ] Relevante Tests sind angepasst.
-- [ ] `go test ./...` ist gruen.
-- [ ] `git diff --check` ist gruen.
+- [x] Relevante Tests sind angepasst.
+- [x] `go test ./...` ist gruen.
+- [x] `git diff --check` ist gruen.
 
 ## Notes
 
 - Falls externe Ressourcen wie Google Fonts nicht erreichbar sind, zaehlt das nicht als Testblocker fuer SSR-Rendering, solange Template- und Routenverhalten korrekt sind.
+- `internal/handler/maintenance_test.go` neu ergänzt fuer Public-Allowlist, Coming-Soon-Fallback und `/staging` Prefix-Stripping.
+- `internal/handler/site_auth_test.go` an neues Produktverhalten angepasst: `/kontakt` GET/POST ist oeffentlich.
+- `internal/handler/render_test.go` prueft jetzt AGB- und Datenschutz-Kerninhalte.
+- Verification: `go test ./...` ist gruen.
+- Verification: `git diff --check` ist gruen.
 
 ## Abschluss
 
-- [ ] Wave abgeschlossen
+- [x] Wave abgeschlossen

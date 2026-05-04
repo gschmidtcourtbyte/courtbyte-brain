@@ -1,6 +1,6 @@
 # Wave 3: Coming-Soon-Seite und Hansefit-Aktion
 
-**Status:** Planned
+**Status:** Completed
 **Skill:** frontend-eng
 **Rolle:** frontend-eng
 **Kann parallel ausgefuehrt werden:** nein
@@ -18,13 +18,13 @@ Die oeffentliche Vorschaltseite wird als markengerechte Coming-Soon-Seite mit Co
 **Agent:** Agent C (frontend-eng)
 
 **Akzeptanzkriterien:**
-- [ ] `web/templates/pages/coming-soon.html` zeigt ein Courts-Logo als starkes First-Viewport-Signal.
-- [ ] Headline/Copy kommunizieren Eröffnung Herbst 2026 und Bad Zwischenahn.
-- [ ] Primärer CTA fuehrt zu `/kontakt` mit klarer Hansefitregistrierung.
-- [ ] Sekundaere Links fuehren nur zu `/impressum`, `/datenschutz`, `/agb`.
-- [ ] Seite funktioniert als Standalone-HTML ohne Base-Layout.
-- [ ] Design bleibt dunkel, minimalistisch, sportlich und mobile-first.
-- [ ] Text passt auf Mobile und Desktop ohne Ueberlappungen.
+- [x] `web/templates/pages/coming-soon.html` zeigt ein Courts-Logo als starkes First-Viewport-Signal.
+- [x] Headline/Copy kommunizieren Eröffnung Herbst 2026 und Bad Zwischenahn.
+- [x] Primärer CTA fuehrt zu `/kontakt` mit klarer Hansefitregistrierung.
+- [x] Sekundaere Links fuehren nur zu `/impressum`, `/datenschutz`, `/agb`.
+- [x] Seite funktioniert als Standalone-HTML ohne Base-Layout.
+- [x] Design bleibt dunkel, minimalistisch, sportlich und mobile-first.
+- [x] Text passt auf Mobile und Desktop ohne Ueberlappungen.
 
 **Kontext:**
 - `web/templates/pages/coming-soon.html`
@@ -39,10 +39,10 @@ Die oeffentliche Vorschaltseite wird als markengerechte Coming-Soon-Seite mit Co
 **Agent:** Agent C (frontend-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Der Text "Ersten 100 Registrierten erhalten Baelle gratis!" ist auf der Coming-Soon-Seite sichtbar.
-- [ ] Der Aktionstext wirkt wie ein Special/Badge, ohne die Hansefitregistrierung zu verdraengen.
-- [ ] Ein Link/Button "Aktionsbedingungen" oeffnet den Dialog.
-- [ ] Keine Tracking- oder Gewinnerlogik wird suggeriert, die technisch nicht existiert.
+- [x] Der Text "Ersten 100 Registrierten erhalten Baelle gratis!" ist auf der Coming-Soon-Seite sichtbar.
+- [x] Der Aktionstext wirkt wie ein Special/Badge, ohne die Hansefitregistrierung zu verdraengen.
+- [x] Ein Link/Button "Aktionsbedingungen" oeffnet den Dialog.
+- [x] Keine Tracking- oder Gewinnerlogik wird suggeriert, die technisch nicht existiert.
 
 **Kontext:**
 - Nutzer sollen bereits vorab das Formular ausfuellen koennen.
@@ -57,12 +57,12 @@ Die oeffentliche Vorschaltseite wird als markengerechte Coming-Soon-Seite mit Co
 **Agent:** Agent C (frontend-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Dialog wird per Button/Link geoeffnet und geschlossen.
-- [ ] Dialog ist per Tastatur bedienbar.
-- [ ] Dialog nutzt `role="dialog"` oder native `<dialog>` mit sinnvollem Label.
-- [ ] Lange Inhalte sind in einem scrollbaren Bereich lesbar.
-- [ ] Inhalt basiert auf `docs/aktionsbedingungen-hansefit.html`.
-- [ ] Bei deaktiviertem JavaScript bleibt mindestens ein sichtbarer Hinweis oder ein fallback-lesbarer Bereich vorhanden.
+- [x] Dialog wird per Button/Link geoeffnet und geschlossen.
+- [x] Dialog ist per Tastatur bedienbar.
+- [x] Dialog nutzt `role="dialog"` oder native `<dialog>` mit sinnvollem Label.
+- [x] Lange Inhalte sind in einem scrollbaren Bereich lesbar.
+- [x] Inhalt basiert auf `docs/aktionsbedingungen-hansefit.html`.
+- [x] Bei deaktiviertem JavaScript bleibt mindestens ein sichtbarer Hinweis oder ein fallback-lesbarer Bereich vorhanden.
 
 **Kontext:**
 - `web/templates/pages/coming-soon.html`
@@ -73,15 +73,20 @@ Die oeffentliche Vorschaltseite wird als markengerechte Coming-Soon-Seite mit Co
 
 ## Wave-3-Exit-Gate
 
-- [ ] Coming-Soon-Seite ist visuell fertig.
-- [ ] Hansefit-CTA fuehrt zu `/kontakt`.
-- [ ] Aktionsbedingungen sind direkt erreichbar.
-- [ ] Keine oeffentlichen Links fuehren in gesperrte Inhalte.
+- [x] Coming-Soon-Seite ist visuell fertig.
+- [x] Hansefit-CTA fuehrt zu `/kontakt`.
+- [x] Aktionsbedingungen sind direkt erreichbar.
+- [x] Keine oeffentlichen Links fuehren in gesperrte Inhalte.
 
 ## Notes
 
 - Keine Landingpage-Sektion bauen; die Coming-Soon-Seite ist die erste und eigentliche oeffentliche Experience im Prelaunch.
+- `web/templates/pages/coming-soon.html` wurde als Standalone-Prelaunch-Seite neu umgesetzt.
+- Courts-Logo, Eröffnung Herbst 2026, Bad Zwischenahn und Hansefit-CTA sind im ersten Viewport sichtbar.
+- Aktion "Ersten 100 Registrierten erhalten Bälle gratis!" ist als Special sichtbar.
+- Aktionsbedingungen sind per native `<dialog>` integriert; Links zeigen nur auf `/kontakt`, `/datenschutz`, `/agb` oder Mail.
+- Verification: Template-Parsing weiterhin erfolgreich via `go test ./internal/handler -run TestRendererRendersContactAndAGBPages`.
 
 ## Abschluss
 
-- [ ] Wave abgeschlossen
+- [x] Wave abgeschlossen

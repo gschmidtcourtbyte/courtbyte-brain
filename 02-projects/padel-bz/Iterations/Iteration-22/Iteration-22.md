@@ -1,6 +1,6 @@
 # Iteration 22: Public Prelaunch Gate, Legal Pages und Hansefit-Aktion
 
-**Status:** Planned
+**Status:** Completed
 **Rolle:** Acting as Product Owner. Planning Iteration 22 for padel-bz.
 **Datum:** 2026-05-04
 
@@ -72,11 +72,11 @@ Die Website geht in einen oeffentlichen Prelaunch-Zustand: Besucher sehen zuerst
 
 | Wave | Skill | Ziel | Status |
 |------|-------|------|--------|
-| Wave 1 | documentation-eng | Legal- und Aktionscontent integrierbar machen | Planned |
-| Wave 2 | handler-eng | Public-Allowlist und Prelaunch-Gate korrigieren | Planned |
-| Wave 3 | frontend-eng | Coming-Soon-Seite und Aktionsdialog umsetzen | Planned |
-| Wave 4 | testing-eng | Tests und Regression verifizieren | Planned |
-| Wave 5 | infrastructure-eng | Deployment-/Betriebscheck fuer Prelaunch | Planned |
+| Wave 1 | documentation-eng | Legal- und Aktionscontent integrierbar machen | Completed |
+| Wave 2 | handler-eng | Public-Allowlist und Prelaunch-Gate korrigieren | Completed |
+| Wave 3 | frontend-eng | Coming-Soon-Seite und Aktionsdialog umsetzen | Completed |
+| Wave 4 | testing-eng | Tests und Regression verifizieren | Completed |
+| Wave 5 | infrastructure-eng | Deployment-/Betriebscheck fuer Prelaunch | Completed |
 
 ## Critical Path
 
@@ -98,13 +98,21 @@ Die Website geht in einen oeffentlichen Prelaunch-Zustand: Besucher sehen zuerst
 
 ## Definition of Done
 
-- [ ] `/` zeigt die Courts-Coming-Soon-Seite.
-- [ ] Coming-Soon-Seite zeigt Courts-Logo, Standort/Eröffnung, Hansefit-CTA und Aktionshinweis.
-- [ ] Aktionsbedingungen sind per Popup/Dialog erreichbar.
-- [ ] `/kontakt` GET und POST sind ohne Site-Passwort erreichbar.
-- [ ] `/impressum`, `/datenschutz`, `/agb` sind ohne Site-Passwort erreichbar.
-- [ ] Der restliche Website-Content ist oeffentlich nicht erreichbar.
-- [ ] AGB und Datenschutzerklaerung enthalten die gelieferten finalen Inhalte aus `docs/`.
-- [ ] `go test ./...` ist gruen.
-- [ ] `git diff --check` ist gruen.
-- [ ] Prelaunch-Betriebsnotiz ist dokumentiert.
+- [x] `/` zeigt die Courts-Coming-Soon-Seite.
+- [x] Coming-Soon-Seite zeigt Courts-Logo, Standort/Eröffnung, Hansefit-CTA und Aktionshinweis.
+- [x] Aktionsbedingungen sind per Popup/Dialog erreichbar.
+- [x] `/kontakt` GET und POST sind ohne Site-Passwort erreichbar.
+- [x] `/impressum`, `/datenschutz`, `/agb` sind ohne Site-Passwort erreichbar.
+- [x] Der restliche Website-Content ist oeffentlich nicht erreichbar.
+- [x] AGB und Datenschutzerklaerung enthalten die gelieferten finalen Inhalte aus `docs/`.
+- [x] `go test ./...` ist gruen.
+- [x] `git diff --check` ist gruen.
+- [x] Prelaunch-Betriebsnotiz ist dokumentiert.
+
+## Abschlussnotes
+
+- AGB, Datenschutzerklaerung und Aktionsbedingungen wurden aus den gelieferten `docs/*.html` in die Anwendung uebernommen.
+- Public Prelaunch Allowlist ist umgesetzt: `/kontakt`, `/impressum`, `/datenschutz`, `/agb`, Assets und Admin bleiben erreichbar; restliche Inhalte laufen ueber Coming Soon.
+- Coming-Soon-Seite wurde mit Courts-Logo, Hansefit-CTA, Aktionsbadge und Aktionsbedingungen-Dialog neu gestaltet.
+- `.env.example` und `docs/Operations.md` dokumentieren `MAINTENANCE_MODE=true` fuer Prelaunch und Smoke-Checks.
+- Verification: `go test ./...` und `git diff --check` sind gruen.

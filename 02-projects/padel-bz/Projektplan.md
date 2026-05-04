@@ -4,7 +4,7 @@
 **Repo:** /home/andersen/git/padel-bz
 **Kunde:** Courts Bad Zwischenahn
 **Eröffnung:** Herbst 2026
-**Letzte abgeschlossene Iteration:** 20
+**Letzte abgeschlossene Iteration:** 23
 
 ## Ziel
 

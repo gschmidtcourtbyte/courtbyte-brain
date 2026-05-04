@@ -1,6 +1,6 @@
 # Wave 5: Prelaunch Deployment und Betriebscheck
 
-**Status:** Planned
+**Status:** Completed
 **Skill:** infrastructure-eng
 **Rolle:** infrastructure-eng
 **Kann parallel ausgefuehrt werden:** nein
@@ -18,10 +18,10 @@ Der Prelaunch-Zustand ist deploybar und fuer den Betrieb klar dokumentiert. Der 
 **Agent:** Agent E (infrastructure-eng)
 
 **Akzeptanzkriterien:**
-- [ ] `.env.example` dokumentiert `MAINTENANCE_MODE`.
-- [ ] Erwarteter Produktionswert fuer Prelaunch ist `MAINTENANCE_MODE=true`.
-- [ ] Keine Secrets werden in Git geschrieben.
-- [ ] Bestehende Railway-Deployment-Konventionen bleiben unveraendert.
+- [x] `.env.example` dokumentiert `MAINTENANCE_MODE`.
+- [x] Erwarteter Produktionswert fuer Prelaunch ist `MAINTENANCE_MODE=true`.
+- [x] Keine Secrets werden in Git geschrieben.
+- [x] Bestehende Railway-Deployment-Konventionen bleiben unveraendert.
 
 **Kontext:**
 - `internal/config/config.go`
@@ -37,10 +37,10 @@ Der Prelaunch-Zustand ist deploybar und fuer den Betrieb klar dokumentiert. Der 
 **Agent:** Agent E (infrastructure-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Smoke-Check umfasst `/`, `/kontakt`, `/impressum`, `/datenschutz`, `/agb`.
-- [ ] Smoke-Check umfasst mindestens einen gesperrten Pfad, z. B. `/baufortschritt` oder direkten Home-Content.
-- [ ] Erwartete Statuscodes/Verhalten sind dokumentiert.
-- [ ] Admin-Erreichbarkeit wird getrennt geprueft.
+- [x] Smoke-Check umfasst `/`, `/kontakt`, `/impressum`, `/datenschutz`, `/agb`.
+- [x] Smoke-Check umfasst mindestens einen gesperrten Pfad, z. B. `/baufortschritt` oder direkten Home-Content.
+- [x] Erwartete Statuscodes/Verhalten sind dokumentiert.
+- [x] Admin-Erreichbarkeit wird getrennt geprueft.
 
 **Kontext:**
 - Deployment auf Railway.
@@ -51,14 +51,19 @@ Der Prelaunch-Zustand ist deploybar und fuer den Betrieb klar dokumentiert. Der 
 
 ## Wave-5-Exit-Gate
 
-- [ ] Prelaunch-Konfiguration ist dokumentiert.
-- [ ] Smoke-Check ist definiert.
-- [ ] Keine Deployment-Secrets wurden veraendert oder committed.
+- [x] Prelaunch-Konfiguration ist dokumentiert.
+- [x] Smoke-Check ist definiert.
+- [x] Keine Deployment-Secrets wurden veraendert oder committed.
 
 ## Notes
 
 - Diese Wave deployt nicht automatisch. Deployment erfolgt nur, wenn der ausfuehrende Agent bzw. User das ausdruecklich freigibt.
+- `.env.example` dokumentiert `MAINTENANCE_MODE=false` lokal und `true` als Prelaunch-Produktionswert.
+- `docs/Operations.md` enthaelt Public-Allowlist, `/staging` Preview-Hinweis und Smoke-Check-Tabelle.
+- Keine Railway-Variablen oder Secrets wurden gesetzt oder veraendert.
+- Verification: `go test ./...` ist gruen.
+- Verification: `git diff --check` ist gruen.
 
 ## Abschluss
 
-- [ ] Wave abgeschlossen
+- [x] Wave abgeschlossen

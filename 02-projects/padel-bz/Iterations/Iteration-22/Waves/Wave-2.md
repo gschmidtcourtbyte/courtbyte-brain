@@ -1,6 +1,6 @@
 # Wave 2: Public-Allowlist und Prelaunch-Gate
 
-**Status:** Planned
+**Status:** Completed
 **Skill:** handler-eng
 **Rolle:** handler-eng
 **Kann parallel ausgefuehrt werden:** nein
@@ -18,12 +18,12 @@ Das Routing bildet den Prelaunch-Zustand korrekt ab: oeffentlich erreichbar sind
 **Agent:** Agent B (handler-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Bei `MAINTENANCE_MODE=true` wird `/kontakt` GET an den Kontakt-Handler durchgereicht.
-- [ ] Bei `MAINTENANCE_MODE=true` wird `/kontakt` POST an den Kontakt-Handler durchgereicht.
-- [ ] Bei `MAINTENANCE_MODE=true` wird `/agb` durchgereicht.
-- [ ] `/impressum`, `/datenschutz`, `/static/*`, `/admin/*` bleiben durchgereicht.
-- [ ] `/` und nicht freigegebene Marketing-/Content-Pfade zeigen die Coming-Soon-Seite.
-- [ ] Kommentar/Code-Doku der Middleware nennt die aktuelle Allowlist korrekt.
+- [x] Bei `MAINTENANCE_MODE=true` wird `/kontakt` GET an den Kontakt-Handler durchgereicht.
+- [x] Bei `MAINTENANCE_MODE=true` wird `/kontakt` POST an den Kontakt-Handler durchgereicht.
+- [x] Bei `MAINTENANCE_MODE=true` wird `/agb` durchgereicht.
+- [x] `/impressum`, `/datenschutz`, `/static/*`, `/admin/*` bleiben durchgereicht.
+- [x] `/` und nicht freigegebene Marketing-/Content-Pfade zeigen die Coming-Soon-Seite.
+- [x] Kommentar/Code-Doku der Middleware nennt die aktuelle Allowlist korrekt.
 
 **Kontext:**
 - `internal/handler/maintenance.go`
@@ -39,11 +39,11 @@ Das Routing bildet den Prelaunch-Zustand korrekt ab: oeffentlich erreichbar sind
 **Agent:** Agent B (handler-eng)
 
 **Akzeptanzkriterien:**
-- [ ] `/kontakt` GET ist ohne Site-Passwort erreichbar.
-- [ ] `/kontakt` POST ist ohne Site-Passwort erreichbar.
-- [ ] Nicht erlaubte Content-Routen bleiben ohne Site-Passwort gesperrt oder laufen in Maintenance auf Coming Soon.
-- [ ] Admin-Routen bleiben nur ueber Admin-Auth geschuetzt.
-- [ ] Bestehende Preview-/Staging-Funktionalitaet bleibt fuer Betreiber erhalten.
+- [x] `/kontakt` GET ist ohne Site-Passwort erreichbar.
+- [x] `/kontakt` POST ist ohne Site-Passwort erreichbar.
+- [x] Nicht erlaubte Content-Routen bleiben ohne Site-Passwort gesperrt oder laufen in Maintenance auf Coming Soon.
+- [x] Admin-Routen bleiben nur ueber Admin-Auth geschuetzt.
+- [x] Bestehende Preview-/Staging-Funktionalitaet bleibt fuer Betreiber erhalten.
 
 **Kontext:**
 - Aktuell liegt `/kontakt` in der password-geschuetzten Route-Gruppe.
@@ -58,9 +58,9 @@ Das Routing bildet den Prelaunch-Zustand korrekt ab: oeffentlich erreichbar sind
 **Agent:** Agent B (handler-eng)
 
 **Akzeptanzkriterien:**
-- [ ] Coming-Soon-Template verlinkt oeffentlich nur erlaubte Seiten.
-- [ ] Keine oeffentliche Navigation zeigt Links auf die gesperrte Landingpage oder Baufortschritt.
-- [ ] Falls Site-Preview erreichbar bleibt, wird er nicht auf der oeffentlichen Coming-Soon-Seite beworben.
+- [x] Coming-Soon-Template verlinkt oeffentlich nur erlaubte Seiten.
+- [x] Keine oeffentliche Navigation zeigt Links auf die gesperrte Landingpage oder Baufortschritt.
+- [x] Falls Site-Preview erreichbar bleibt, wird er nicht auf der oeffentlichen Coming-Soon-Seite beworben.
 
 **Kontext:**
 - `web/templates/pages/coming-soon.html`
@@ -72,14 +72,19 @@ Das Routing bildet den Prelaunch-Zustand korrekt ab: oeffentlich erreichbar sind
 
 ## Wave-2-Exit-Gate
 
-- [ ] Oeffentliche Allowlist ist implementiert.
-- [ ] `/kontakt`, `/impressum`, `/datenschutz`, `/agb` sind ohne Site-Passwort erreichbar.
-- [ ] Restlicher Content bleibt gesperrt/vorgeschaltet.
+- [x] Oeffentliche Allowlist ist implementiert.
+- [x] `/kontakt`, `/impressum`, `/datenschutz`, `/agb` sind ohne Site-Passwort erreichbar.
+- [x] Restlicher Content bleibt gesperrt/vorgeschaltet.
 
 ## Notes
 
 - Security-relevant: Kontakt POST bleibt oeffentlich, daher muessen CSRF und Rate Limiting unveraendert greifen.
+- `cmd/server/main.go`: `/kontakt` GET/POST aus der passwortgeschuetzten Preview-Gruppe herausgezogen.
+- `internal/handler/maintenance.go`: Public-Allowlist um `/kontakt` und `/agb` erweitert; Doku-Kommentar aktualisiert.
+- `internal/handler/site_auth.go`: `/kontakt` als Public-Prelaunch-Exemption ergänzt.
+- `web/templates/partials/nav.html` und `web/templates/partials/footer.html`: oeffentliche Links auf freigegebene Prelaunch-Seiten reduziert.
+- Verification: `go test ./internal/handler -run TestRequireSitePassword` ist gruen.
 
 ## Abschluss
 
-- [ ] Wave abgeschlossen
+- [x] Wave abgeschlossen

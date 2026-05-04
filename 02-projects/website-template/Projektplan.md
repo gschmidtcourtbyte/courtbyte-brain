@@ -3,7 +3,7 @@
 **Status:** In Progress
 **Repo:** /home/andersen/git/website-template
 **Kunde:** intern (Master-Template, wird je Kunde geklont)
-**Letzte abgeschlossene Iteration:** —
+**Letzte abgeschlossene Iteration:** 2 (Admin-Login + Railway-Runtime, Railway Verified 2026-04-29)
 
 ## Ziel
 
@@ -95,15 +95,16 @@ Das ist das Herzstück. Per Kunde austauschbar **ohne Komponenten anzufassen**:
 
 | Iteration | Goal |
 |---|---|
-| **1** | Frontend bootstrappen + Design 1:1 portieren (Frontend-only, statische Daten) |
-| **2** | Admin-Login unter `/admin`, Postgres-Persistenz, Redis-Session-Cache, Railway-only Verification |
-| 3 | Frontend ausfeilen: Responsive, A11y, SEO, Performance, i18n-Basis |
-| 4 | Contact + Careers POST mit Persistenz, Rate Limits und Admin-Inbox-Grundlage |
-| 5 | Admin-CMS-UI für Anfragen + Karriere-Inbox |
-| 6 | Admin-CMS-UI für Stellen + Seiten + Galerie + Settings |
+| **1** | Frontend bootstrappen + Design 1:1 portieren (Frontend-only, statische Daten) — Done |
+| **2** | Admin-Login unter `/admin`, Postgres-Persistenz, Redis-Session-Cache, Railway-only Verification — Done |
+| **3** | Admin-CMS Optik unter `/admin` + Responsive für Frontend & Admin (Mock-Daten, Dark-only-Admin, echte Routen) |
+| 4 | Responsive-Bugfix Burger-Menü + Contact/Careers POST mit Persistenz, Rate Limits und Admin-Inbox-Grundlage — Planned |
+| 5 | Anfragen + Karriere-Inbox an echte Backend-Endpoints binden (Mock → API) |
+| 6 | Stellen + Seiten + Galerie + Settings an echte Backend-Endpoints binden + File-Upload |
 | 7 | Mail-Versand (Bestätigung Eingang, Admin-Notification) |
-| 8 | Deployment-Templates finalisieren + Kunden-Clone Runbook |
-| 9 | Erster Kunden-Clone + Tweak-Workflow dokumentieren |
+| 8 | Frontend-Polish: A11y, SEO, Performance, i18n-Basis (Responsive bereits in Iter 3) |
+| 9 | Deployment-Templates finalisieren + Kunden-Clone Runbook |
+| 10 | Erster Kunden-Clone + Tweak-Workflow dokumentieren |
 
 ## Was nicht ins Repo gehört
 

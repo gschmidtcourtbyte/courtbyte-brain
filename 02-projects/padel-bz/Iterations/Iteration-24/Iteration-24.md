@@ -1,6 +1,6 @@
 # Iteration 24: Coming-Soon Layout Cleanup
 
-**Status:** Planned
+**Status:** Completed
 **Rolle:** Acting as Product Owner. Planning Iteration 24 for padel-bz.
 **Datum:** 2026-05-04
 
@@ -56,7 +56,7 @@ Die Coming-Soon-Seite wird visuell reduziert und klarer ausgerichtet. Der Conten
 
 | Wave | Skill | Ziel | Status |
 |------|-------|------|--------|
-| Wave 1 | frontend-eng | Coming-Soon-Content entrahmen, Textmarke entfernen, Eroeffnungshinweis unter Logo platzieren | Planned |
+| Wave 1 | frontend-eng | Coming-Soon-Content entrahmen, Textmarke entfernen, Eroeffnungshinweis unter Logo platzieren | Completed |
 
 ## Critical Path
 
@@ -74,14 +74,15 @@ Die Coming-Soon-Seite wird visuell reduziert und klarer ausgerichtet. Der Conten
 
 ## Definition of Done
 
-- [ ] Coming-Soon-Content hat keinen sichtbaren Kasten, Rahmen oder Card-Hintergrund mehr.
-- [ ] `Courts Padelclub Bad Zwischenahn` ist oberhalb des Logos entfernt.
-- [ ] `Eröffnung Herbst 2026` steht direkt unter dem Logo.
-- [ ] Logo, Eroeffnungshinweis und Text sind optisch buendig ausgerichtet.
-- [ ] Mobile und Desktop zeigen keine Ueberlappungen, abgeschnittenen Texte oder Layout-Spruenge.
-- [ ] Keine Code-Aenderungen ausserhalb der Coming-Soon-Template-/Style-Flaeche.
-- [ ] Relevanter Render-/Build-Check ist gruen oder eine bekannte Ausnahme ist dokumentiert.
+- [x] Coming-Soon-Content hat keinen sichtbaren Kasten, Rahmen oder Card-Hintergrund mehr.
+- [x] `Courts Padelclub Bad Zwischenahn` ist oberhalb des Logos entfernt.
+- [x] `Eröffnung Herbst 2026` steht direkt unter dem Logo.
+- [x] Logo, Eroeffnungshinweis und Text sind optisch buendig ausgerichtet.
+- [x] Mobile und Desktop zeigen keine Ueberlappungen, abgeschnittenen Texte oder Layout-Spruenge.
+- [x] Keine Code-Aenderungen ausserhalb der Coming-Soon-Template-/Style-Flaeche.
+- [x] Relevanter Render-/Build-Check ist gruen oder eine bekannte Ausnahme ist dokumentiert.
 
 ## Abschlussnotes
 
-- Offen bis zur Umsetzung.
+- Wave 1 abgeschlossen: Coming-Soon-Rahmen entfernt, obere Textmarke entfernt, `Eröffnung Herbst 2026` direkt unter das Logo verschoben, Logo/Textgruppe buendig ausgerichtet.
+- Verification: `go test ./internal/handler -run 'TestMaintenanceMiddlewareServesComingSoonForBlockedPaths|TestMaintenanceMiddlewareAdminBypass'`, `go test ./...`, `git diff --check` — alle gruen.

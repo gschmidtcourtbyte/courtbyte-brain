@@ -3,7 +3,8 @@
 **Status:** In Progress
 **Repo:** /home/andersen/git/website-template
 **Kunde:** intern (Master-Template, wird je Kunde geklont)
-**Letzte abgeschlossene Iteration:** 2 (Admin-Login + Railway-Runtime, Railway Verified 2026-04-29)
+**Letzte abgeschlossene Iteration:** 5 (Karriereportal produktiv, Code-Done 2026-05-14, Staging-Verifikation in Iteration 6)
+**Aktive Iteration:** 6 (Railway-Setup + S3-Anbindung — geplant, Bearbeitung durch Codex MCP Server)
 
 ## Ziel
 

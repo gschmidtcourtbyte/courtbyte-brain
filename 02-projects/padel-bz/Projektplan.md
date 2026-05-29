@@ -4,7 +4,7 @@
 **Repo:** /home/andersen/git/padel-bz
 **Kunde:** Courts Bad Zwischenahn
 **Eröffnung:** Herbst 2026
-**Letzte abgeschlossene Iteration:** 20
+**Letzte abgeschlossene Iteration:** 24
 
 ## Ziel
 
@@ -46,5 +46,5 @@ Hauptfeatures: Kontaktformular (Hansefit-Registrierung) + CMS für Baufortschrit
 
 ## Historische Planungsdateien
 
-Iterationen 1–20 liegen als Legacy in `plan/iterations/` im Repo.
-Ab Iteration 21 kommen alle Planungsdateien in diese Vault.
+Iterationen 1–20 wurden aus `plan/iterations/` in die Vault-Struktur `Iterations/Iteration-N/` migriert.
+Ab Iteration 21 werden alle neuen Planungsdateien direkt in dieser Vault gepflegt.

@@ -88,13 +88,24 @@ cd {code-repo} && git push
 ## 5. Iteration Planning Workflow
 
 **Trigger:** User says "Plan Iteration N for Project Y"
+**Role:** Product Owner — state this explicitly before starting.
+**Important:** All files are written to the VAULT, never to the code repo.
 
-1. Read `.vault` → get vault path
-2. Read `Projektplan.md` + last completed `Iteration-(N-1).md`
-3. Adopt role: **Product Owner**
-4. Create `Iterations/Iteration-N/Iteration-N.md`
-5. Create one `Wave-X.md` per wave, assign a Skill to each
-6. Discuss with user before touching any code
+1. Read `.vault` in the code repo root → get `{vault}` path
+2. Read `{vault}/02-projects/{Project}/Projektplan.md`
+3. Read `{vault}/02-projects/{Project}/Iterations/Iteration-(N-1)/Iteration-(N-1).md` to understand what was already built
+4. State: *"Acting as Product Owner. Planning Iteration N for {Project}."*
+5. Draft the iteration plan — discuss scope and waves with the user before writing files
+6. Create `{vault}/02-projects/{Project}/Iterations/Iteration-N/Iteration-N.md`
+7. Create `{vault}/02-projects/{Project}/Iterations/Iteration-N/Waves/Wave-1.md`, `Wave-2.md`, … one per wave
+8. Do not touch any code repo files during planning
+9. After user approval: commit and push the vault only
+   ```bash
+   cd {vault}
+   git add 02-projects/{Project}/Iterations/Iteration-N/
+   git commit -m "plan: Iteration N — {Title}"
+   git push
+   ```
 
 ---
 

@@ -1,24 +1,18 @@
 # Second Brain — Vault Schema
 
-You are an LLM agent operating inside a personal knowledge vault and coding workspace.
-Two distinct roles: **Wiki Agent** (knowledge base) and **Coding Agent** (project planning + execution).
+You are an LLM agent operating inside a vault and coding workspace.
+Two distinct roles: **Coding Agent** (project planning + execution).
 
-> MCP tools not yet configured. Use filesystem tools (Read, Write, Edit, Grep, Glob, Bash) directly.
+
 
 ---
 
 ## 1. Directory Structure
 
 ```
-raw/              → source documents. READ-ONLY. Never modify.
-wiki/             → LLM-maintained wiki. You own this layer entirely.
-wiki/index.md     → catalog of all wiki pages — update on every ingest
-wiki/log.md       → append-only event log
-00-inbox/         → unprocessed captures
-01-ideas/         → raw ideas
+
+
 02-projects/      → coding project planning (vault-side only)
-03-research/      → domain research
-04-knowledge/     → refined long-term notes
 meta/             → system notes (vault-map, workflow)
 templates/        → note templates
 ```
@@ -275,41 +269,8 @@ Project planning lives at: {vault}/02-projects/{ProjectName}/
 
 ---
 
-## 7. Wiki Workflows
+## 7. General Rules
 
-### Ingest
-
-When user drops a source in `raw/` or pastes content:
-
-1. Read source fully
-2. Discuss 2–4 key takeaways
-3. Save to `raw/{slug}.md` if pasted
-4. Write `wiki/source-{slug}.md`
-5. Create/update `concept-`, `tool-`, `person-` pages
-6. Add `[[wikilinks]]` between all touched pages
-7. Update `wiki/index.md`
-8. Append to `wiki/log.md`: `## [YYYY-MM-DD] ingest | {Title}`
-
-### Query
-
-1. Read `wiki/index.md`
-2. Read relevant pages
-3. Synthesize answer with `[[wikilink]]` citations
-4. Offer to file as `wiki/synthesis-{topic}.md` if valuable
-
-### Lint
-
-- Flag contradictions, orphan pages, missing concept pages
-- Suggest next sources or questions
-- Append to `wiki/log.md`: `## [YYYY-MM-DD] lint | {summary}`
-
----
-
-## 8. General Rules
-
-- **Never modify `raw/`.**
-- **Never create planning files in the Git repo.**
-- **Never modify `raw/`.**
 - **Never create planning files in the Git repo.**
 - **Always read `.vault` first** when running from a repo — it resolves the vault path.
 - **Always read vault before touching code** — Rules.md, Projektplan, Iteration, Wave.
@@ -317,8 +278,6 @@ When user drops a source in `raw/` or pastes content:
 - **Mark tasks done in Wave-X.md** after each session.
 - **Push vault + code repo together** when an iteration is fully done.
 - **Pull vault before starting a new iteration** — get teammate's latest planning state.
-- **Search before creating** — check `wiki/index.md` before writing a new wiki page.
-- **Never delete** — move to `00-inbox/` if unsure.
 - **Note names without `.md`** — Obsidian appends `.md` automatically.
 - **`.vault` file is never committed** — each team member manages it locally.
 

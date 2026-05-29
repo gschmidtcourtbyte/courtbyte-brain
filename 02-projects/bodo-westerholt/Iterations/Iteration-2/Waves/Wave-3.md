@@ -37,6 +37,19 @@ entspricht (60/30/10, Schraege, Mono-Daten).
 - [ ] Kontaktdaten + Stat-Zahlen in Mono
 - [ ] Mobile + Desktop ohne offensichtliche Layout-Probleme
 
+## Befunde aus [[Wave-2]] (hier zu beruecksichtigen)
+
+- **Wordmark-Sublinie:** `siteConfig` hat kein eigenes Sublinie-Feld; `Wordmark`
+  leitet "Unternehmensgruppe" per `slice` aus `companyNameLong` ab (robust, mit
+  Fallback). Sauberer waere ein dediziertes Feld in `site-config.ts`
+  (z. B. `companySubline`) - optionaler Cleanup in dieser Wave.
+- **12-Grad kommt aus dem italic-Schnitt**, NICHT aus `skewX` (Manual fuehrt
+  skewX als Fehlanwendung). Bei eigenen Schraegen-Anwendungen beachten:
+  Wortmarke nie zusaetzlich skewen.
+- Primitives sind gebaut, aber noch **nirgends importiert** (tree-shaken). Diese
+  Wave webt sie ein: `Wordmark`, `SignalStripe`, `DiagonalClip`, `MonoLabel`,
+  `StatFigure`.
+
 ## Befunde aus [[Wave-1]] (hier aufzuloesen)
 
 1. **Veralteter Papier-Hex `#F5F3EE` hartcodiert** statt `t.bg`/`t.text` in:

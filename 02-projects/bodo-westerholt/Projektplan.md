@@ -4,8 +4,8 @@
 **Repo:** /home/andersen/git/bodo-westerholt
 **Kunde:** Bodo Westerholt Unternehmensgruppe (Tiefbau)
 **Letzte abgeschlossene Iteration:** 0 (Iteration 1 wartet auf visuelle Abnahme)
-**Aktive Iteration:** [[Iteration-1]] - Frontend-Kundentouch (Tiefbau Branding)
-**Corporate Design:** [[Corporate-Design]]
+**Aktive Iteration:** [[Iteration-2]] - CD-Manual-Alignment
+**Corporate Design:** [[CD-Manual]] (verbindlich) · [[Corporate-Design]] (Interim)
 **Offene Asset-Liste:** [[Open-Assets]]
 
 ## Ziel
@@ -63,14 +63,15 @@ docs/                    - Deployment- und Runbook-Dokumentation
 | Iteration | Ziel |
 |---|---|
 | 1 | [[Iteration-1]] - Frontend-Kundentouch: Theme, Logo, Fonts, Komponenten-Refresh, Tiefbau-Content |
-| 2 | Backend- und Deployment-Basischeck (verschoben aus Iter. 1) + erste Unterseiten-Ausarbeitung mit Kundenmaterial |
-| 3 | Kontakt-/Karriere-/CMS-Flows kundenspezifisch pruefen |
-| 4 | Deployment, Smoke-Test, SEO/Legal-Check |
+| 2 | [[Iteration-2]] - CD-Manual-Alignment: Archivo + IBM Plex Mono, strikt Rot/Anthrazit, Wortmarke + "Die Schraege" |
+| 3 | Backend- und Deployment-Basischeck + erste Unterseiten-Ausarbeitung mit Kundenmaterial |
+| 4 | Kontakt-/Karriere-/CMS-Flows kundenspezifisch pruefen; Deployment, Smoke-Test, SEO/Legal-Check |
 
 ## Naechste Schritte
 
-- [[Iteration-1]] ausfuehren ([[Wave-1]] -> [[Wave-2]] -> [[Wave-3]]).
-- Open-Assets-Liste (entsteht in [[Wave-3]]) mit Kunde durchgehen.
+- [[Iteration-2]] ausfuehren (Wave 1 -> 2 -> 3 -> 4); CD-Manual ist verbindlich.
+- Nach Iteration 2: [[Corporate-Design]] auf das [[CD-Manual]] nachziehen.
+- Open-Assets-Liste mit Kunde durchgehen.
 - Kundenmaterial sammeln: echte Bilder, finale Texte, rechtliche Angaben.
 
 ## Was nicht ins Repo gehoert

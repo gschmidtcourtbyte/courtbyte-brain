@@ -37,9 +37,25 @@ entspricht (60/30/10, Schraege, Mono-Daten).
 - [ ] Kontaktdaten + Stat-Zahlen in Mono
 - [ ] Mobile + Desktop ohne offensichtliche Layout-Probleme
 
+## Befunde aus [[Wave-1]] (hier aufzuloesen)
+
+1. **Veralteter Papier-Hex `#F5F3EE` hartcodiert** statt `t.bg`/`t.text` in:
+   `components/Hero.tsx:104`, `components/PageHeader.tsx:18`,
+   `components/StatsBar.tsx:51`, `app/(marketing)/ueber-uns/page.tsx:125`.
+   -> auf Token bzw. `#F4F1EA` ziehen.
+2. **`components/Testimonials.tsx:80`** — `fontFamily:'Georgia, serif'`
+   hartcodiert, passt nicht zur CD (Archivo). Auf `--font-display`/`--font-body`
+   ziehen oder Designentscheid einholen.
+3. **`app/(marketing)/karriere/page.tsx`** (Z.133 Gradient, Z.160 background)
+   liest jetzt `t.accent = #1C1C1A` (frueher Gelb) — kein Code-Fix noetig, aber
+   **visuell pruefen** (Anthrazit statt Gelb-Gradient).
+4. Schrift-Referenzen laufen sonst durchweg ueber `var(--font-*)` — Swap
+   propagiert automatisch (Ausnahme: Punkt 2).
+5. Viele `color:'#FFFFFF'/'#fff'` auf farbigen Flaechen — meist legitim (Text
+   auf Rot/Anthrazit). Optional in Wave 3 gegen ein `t.onPrimary`-Token
+   vereinheitlichen, falls gewuenscht.
+
 ## Notes
 
 - 60/30/10 ist Leitplanke: Rot bleibt 10-%-Signal, nicht Flaeche.
 - `/admin` bleibt unangetastet (Dark-only CMS, kein CD-Manual-Scope).
-- Befunde aus [[Wave-1]] (hardcodierte Schrift/Farbe in Komponenten) hier
-  aufloesen.

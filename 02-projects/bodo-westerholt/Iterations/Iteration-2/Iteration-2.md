@@ -38,8 +38,8 @@ werden umgesetzt.
 
 | Wave | Skill | Focus | Status |
 |---|---|---|---|
-| [[Wave-1]] | frontend-design | Tokens: Fonts, exakte Farben, Gelb raus, Schraegen-Tokens | In Umsetzung |
-| [[Wave-2]] | frontend-design | Marken-Primitives (Wordmark, SignalStripe, DiagonalClip, MonoLabel, StatFigure) | Geplant |
+| [[Wave-1]] | frontend-design | Tokens: Fonts, exakte Farben, Gelb raus, Schraegen-Tokens | Done |
+| [[Wave-2]] | frontend-design | Marken-Primitives (Wordmark, SignalStripe, DiagonalClip, MonoLabel, StatFigure) | In Umsetzung |
 | [[Wave-3]] | frontend-design | Anwendung auf Seiten/Komponenten, Blobs raus, Mono-Daten | Geplant |
 | [[Wave-4]] | testing-eng | Build/Lint/Visual-Verifikation, 60/30/10- & A11y-Audit | Geplant |
 

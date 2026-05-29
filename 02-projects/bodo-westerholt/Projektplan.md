@@ -1,23 +1,29 @@
 # bodo-westerholt - Projektplan
 
-**Status:** Initial Setup
+**Status:** Iteration 1 Code-Tasks erledigt — visuelle Abnahme offen
 **Repo:** /home/andersen/git/bodo-westerholt
-**Kunde:** Bodo Westerholt
-**Letzte abgeschlossene Iteration:** 0
-**Aktive Iteration:** 1 - Kunden-Initialisierung und Basis-Branding
+**Kunde:** Bodo Westerholt Unternehmensgruppe (Tiefbau)
+**Letzte abgeschlossene Iteration:** 0 (Iteration 1 wartet auf visuelle Abnahme)
+**Aktive Iteration:** [[Iteration-1]] - Frontend-Kundentouch (Tiefbau Branding)
+**Corporate Design:** [[Corporate-Design]]
+**Offene Asset-Liste:** [[Open-Assets]]
 
 ## Ziel
 
-Kundenwebsite fuer Bodo Westerholt auf Basis des Courtbyte Website-Templates.
-Das Repo ist als Kunden-Clone vorbereitet und wird ueber Theme, Site Config,
-Content und Assets kundenspezifisch angepasst.
+Kundenwebsite fuer Bodo Westerholt Unternehmensgruppe auf Basis des
+Courtbyte Website-Templates. Das Repo ist als Kunden-Clone vorbereitet
+und wird ueber Theme, Site Config, Content und Assets kundenspezifisch
+angepasst. Branche ist Tiefbau (Erdbau, Kanalbau, Strassenbau, Rueckbau).
 
 ## Ausgangsbasis
 
 - Template-Code wurde aus `/home/andersen/git/website-template` uebernommen.
-- Lokale Build-Artefakte, `node_modules`, `.next`, Docker-Daten und Template-Git-Historie wurden nicht uebernommen.
+- Lokale Build-Artefakte, `node_modules`, `.next`, Docker-Daten und
+  Template-Git-Historie wurden nicht uebernommen.
 - `.vault` zeigt auf `/home/andersen/git/courtbyte-brain`.
 - Projektplanung liegt in diesem Brain-Ordner.
+- Logo, Primaer-/Sekundaerfarbe sowie Branche sind seit 2026-05-29 bekannt
+  und in [[Corporate-Design]] festgehalten.
 
 ## Tech Stack
 
@@ -56,20 +62,21 @@ docs/                    - Deployment- und Runbook-Dokumentation
 
 | Iteration | Ziel |
 |---|---|
-| 1 | Kunden-Initialisierung, Basis-Branding, Content-/Asset-Luecken klaeren |
-| 2 | Startseiten- und Unterseiteninhalte mit Kundenmaterial ausarbeiten |
+| 1 | [[Iteration-1]] - Frontend-Kundentouch: Theme, Logo, Fonts, Komponenten-Refresh, Tiefbau-Content |
+| 2 | Backend- und Deployment-Basischeck (verschoben aus Iter. 1) + erste Unterseiten-Ausarbeitung mit Kundenmaterial |
 | 3 | Kontakt-/Karriere-/CMS-Flows kundenspezifisch pruefen |
 | 4 | Deployment, Smoke-Test, SEO/Legal-Check |
 
 ## Naechste Schritte
 
-- Kundenmaterial sammeln: Logo, Farben, Fotos, Texte, rechtliche Angaben, Kontaktwege.
-- Theme und Content anhand des Materials anpassen.
-- Frontend und Backend lokal verifizieren.
-- Deployment-Variablen fuer Staging vorbereiten.
+- [[Iteration-1]] ausfuehren ([[Wave-1]] -> [[Wave-2]] -> [[Wave-3]]).
+- Open-Assets-Liste (entsteht in [[Wave-3]]) mit Kunde durchgehen.
+- Kundenmaterial sammeln: echte Bilder, finale Texte, rechtliche Angaben.
 
 ## Was nicht ins Repo gehoert
 
 - Planungsdateien bleiben in diesem Brain-Ordner.
 - Secrets gehoeren in lokale `.env` oder Deployment-Variables, nicht in Git.
 - Produktive Kundenbilder nur mit Freigabe und Nutzungsrechten einchecken.
+- Das Logo aus `Bilder/` ist Repo-extern; in [[Wave-1]] wird es nach
+  `frontend/public/` kopiert (Nutzungsrecht durch Kunde implizit gegeben).

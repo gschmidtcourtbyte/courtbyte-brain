@@ -33,6 +33,18 @@ Sicherstellen, dass das umgesetzte System dem Manual entspricht - technisch
 - [ ] [[Corporate-Design]] Typografie-/Akzent-Abschnitt auf das Manual
       nachgezogen oder als ueberholt markiert (Brain-Konsistenz)
 
+## Konkrete Befunde aus [[Wave-3]] (hier pruefen/fixen)
+
+- **StatFigure-Label-Kontrast:** Auf der fixen Anthrazit-Flaeche der StatsBar
+  rendert `StatFigure` sein Label via `MonoLabel tone="muted"` = `#6E6A60` auf
+  `#1C1C1A` (~3:1, grenzwertig fuer kleines Uppercase). Sauberer Fix: optionales
+  `tone="inherit"`-Prop an `StatFigure` (dann hellerer Label-Ton auf dunklem
+  Grund). Im A11y-Schritt entscheiden + umsetzen.
+- **Karriere-Seite visuell pruefen:** zieht jetzt `t.accent = #1C1C1A` (frueher
+  Gelb-Gradient) — Anthrazit-Wirkung gegenchecken.
+- **`companySubline`-Feld** (optionaler site-config-Cleanup, [[Wave-2]]/[[Wave-3]])
+  — entweder hier nachziehen oder bewusst offen lassen.
+
 ## Notes
 
 - Visuelle Abnahme ist der eigentliche Gate - Build-Gruen allein reicht nicht.

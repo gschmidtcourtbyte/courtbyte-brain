@@ -2,9 +2,11 @@
 
 **Iteration:** [[Iteration-2]]
 **Skill:** frontend-design
-**Status:** Geplant
+**Status:** Done (2026-05-30)
 **Referenz:** [[CD-Manual]]
 **Voraussetzung:** [[Wave-2]] (Primitives) abgeschlossen
+**Umsetzung:** 2 parallele Agenten (`wave3-chrome` + `wave3-sections`),
+disjunkte Datei-Eigentuemerschaft, integrierter Build durch Team-Lead gruen.
 
 ## Zweck
 
@@ -36,6 +38,28 @@ entspricht (60/30/10, Schraege, Mono-Daten).
 - [ ] Wordmark im Header/Footer sichtbar, Mindestbreite >= 120 px gewahrt
 - [ ] Kontaktdaten + Stat-Zahlen in Mono
 - [ ] Mobile + Desktop ohne offensichtliche Layout-Probleme
+
+## Ergebnis (2026-05-30)
+
+`lint` sauber, integrierter `build` exit 0 (alle Routen). Befunde aus Wave 1+2
+aufgeloest.
+
+**chrome (`wave3-chrome`):** Navbar/Footer → `Wordmark` (Footer `negativ`);
+Hero-Foto via `DiagonalClip` + `SignalStripe`-Kante, `#F5F3EE` → `t.bg`;
+HeroText-Eyebrow → `MonoLabel`, Headline-Akzentstripe; `Blobs.tsx` geloescht
+(`ScrollHint` nach `Hero.tsx` gezogen — war Blobs' einziger Konsument; Blobs
+hing an Hero, NICHT am Layout); `blobFloat`-Keyframes raus; 2 sparsame
+`SectionDivider` in `page.tsx` (10-%-Regel gewahrt).
+
+**sections (`wave3-sections`):** StatsBar → `StatFigure`; Eyebrows → `MonoLabel`
+in Process, Testimonials, Gallery, LeistungenPreview, PageHeader, StatsBar;
+Testimonials-Quote-Glyph Georgia → Archivo Black italic; Kontaktdaten
+(kontakt/ansprechpartner) in `--font-mono`; alle `#F5F3EE` → `#F4F1EA`,
+Anthrazit-Flaechen via `t.accent`.
+
+**Hinweise:** `FeaturesStrip.tsx` hatte keinen Eyebrow — bewusst unangetastet.
+`site-config` unberuehrt (`companySubline` weiter offen). `Logo.tsx` bleibt als
+Fallback. A11y-Befund StatFigure-Label → siehe [[Wave-4]].
 
 ## Befunde aus [[Wave-2]] (hier zu beruecksichtigen)
 

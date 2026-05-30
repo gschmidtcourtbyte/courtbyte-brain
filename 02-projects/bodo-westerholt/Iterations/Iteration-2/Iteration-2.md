@@ -40,8 +40,8 @@ werden umgesetzt.
 |---|---|---|---|
 | [[Wave-1]] | frontend-design | Tokens: Fonts, exakte Farben, Gelb raus, Schraegen-Tokens | Done |
 | [[Wave-2]] | frontend-design | Marken-Primitives (Wordmark, SignalStripe, DiagonalClip, MonoLabel, StatFigure) | Done |
-| [[Wave-3]] | frontend-design | Anwendung auf Seiten/Komponenten, Blobs raus, Mono-Daten | Naechste |
-| [[Wave-4]] | testing-eng | Build/Lint/Visual-Verifikation, 60/30/10- & A11y-Audit | Geplant |
+| [[Wave-3]] | frontend-design | Anwendung auf Seiten/Komponenten, Blobs raus, Mono-Daten | Done |
+| [[Wave-4]] | testing-eng | Build/Lint/Visual-Verifikation, 60/30/10- & A11y-Audit | Naechste |
 
 > Hinweis: Auf Kundenwunsch wird in allen Build-Waves der Skill
 > **frontend-design** statt frontend-eng verwendet.

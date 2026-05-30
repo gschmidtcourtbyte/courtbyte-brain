@@ -1,10 +1,10 @@
 # bodo-westerholt - Projektplan
 
-**Status:** Iteration 1 Code-Tasks erledigt — visuelle Abnahme offen
+**Status:** Iteration 2 (CD-Manual-Alignment) abgeschlossen — abnahmefaehig
 **Repo:** /home/andersen/git/bodo-westerholt
 **Kunde:** Bodo Westerholt Unternehmensgruppe (Tiefbau)
-**Letzte abgeschlossene Iteration:** 0 (Iteration 1 wartet auf visuelle Abnahme)
-**Aktive Iteration:** [[Iteration-2]] - CD-Manual-Alignment
+**Letzte abgeschlossene Iteration:** 2 (CD-Manual-Alignment, abnahmefaehig)
+**Aktive Iteration:** — (naechste: Backend-/Deployment-Basischeck)
 **Corporate Design:** [[CD-Manual]] (verbindlich) · [[Corporate-Design]] (Interim)
 **Offene Asset-Liste:** [[Open-Assets]]
 

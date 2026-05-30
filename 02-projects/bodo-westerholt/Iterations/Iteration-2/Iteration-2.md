@@ -1,6 +1,6 @@
 # Iteration 2 - CD-Manual-Alignment (Brand-System scharfstellen)
 
-**Status:** Geplant - Wave 1 in Umsetzung
+**Status:** Abgeschlossen (2026-05-30) — abnahmefaehig
 **Repo:** bodo-westerholt (Kunden-Clone)
 **Datum:** 2026-05-30 (Start)
 **Referenz:** [[CD-Manual]] (verbindlich) - praezisiert [[Corporate-Design]]
@@ -41,7 +41,7 @@ werden umgesetzt.
 | [[Wave-1]] | frontend-design | Tokens: Fonts, exakte Farben, Gelb raus, Schraegen-Tokens | Done |
 | [[Wave-2]] | frontend-design | Marken-Primitives (Wordmark, SignalStripe, DiagonalClip, MonoLabel, StatFigure) | Done |
 | [[Wave-3]] | frontend-design | Anwendung auf Seiten/Komponenten, Blobs raus, Mono-Daten | Done |
-| [[Wave-4]] | testing-eng | Build/Lint/Visual-Verifikation, 60/30/10- & A11y-Audit | Naechste |
+| [[Wave-4]] | testing-eng | Build/Lint/Visual-Verifikation, 60/30/10- & A11y-Audit | Done |
 
 > Hinweis: Auf Kundenwunsch wird in allen Build-Waves der Skill
 > **frontend-design** statt frontend-eng verwendet.
@@ -54,19 +54,19 @@ gebaut werden.
 
 ## Acceptance Criteria
 
-- [ ] `layout.tsx` laedt Archivo (400-900 + italic) + IBM Plex Mono; Big
+- [x] `layout.tsx` laedt Archivo (400-900 + italic) + IBM Plex Mono; Big
       Shoulders / DM Sans / JetBrains Mono entfernt
-- [ ] `theme.ts` traegt exakte Beton-Neutralskala aus [[CD-Manual]];
+- [x] `theme.ts` traegt exakte Beton-Neutralskala aus [[CD-Manual]];
       `DEFAULT_ACCENT` (Gelb) entfernt, Akzent = Anthrazit
-- [ ] Kein `#F2C200`-Akzent mehr in Theme/Tweaks (Warnschutz-Gelb nur falls
+- [x] Kein `#F2C200`-Akzent mehr in Theme/Tweaks (Warnschutz-Gelb nur falls
       explizit funktional)
-- [ ] `Wordmark`-Komponente: Archivo Black italic, 12 Grad, Blocksatz-Sublinie,
+- [x] `Wordmark`-Komponente: Archivo Black italic, 12 Grad, Blocksatz-Sublinie,
       4 Farbvarianten, aus `site-config` gespeist
-- [ ] `SignalStripe` + `DiagonalClip` als wiederverwendbare Primitives
-- [ ] Eyebrows/Labels in IBM Plex Mono, Kontaktdaten in Mono
-- [ ] `Blobs` aus dem Marketing-Layout entfernt
-- [ ] `npm run build` + `npm run lint` sauber (TS strict)
-- [ ] Visuelle Abnahme: Home/Ueber-uns/Karriere/Kontakt entsprechen dem Manual
+- [x] `SignalStripe` + `DiagonalClip` als wiederverwendbare Primitives
+- [x] Eyebrows/Labels in IBM Plex Mono, Kontaktdaten in Mono
+- [x] `Blobs` aus dem Marketing-Layout entfernt
+- [x] `npm run build` + `npm run lint` sauber (TS strict)
+- [x] Visuelle Abnahme: Home/Ueber-uns/Karriere/Kontakt entsprechen dem Manual
 
 ## Notes
 

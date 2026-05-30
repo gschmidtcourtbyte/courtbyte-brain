@@ -2,9 +2,32 @@
 
 **Iteration:** [[Iteration-2]]
 **Skill:** testing-eng (+ frontend-design fuer Politur)
-**Status:** Geplant
+**Status:** Done (2026-05-30) — **abnahmefaehig**
 **Referenz:** [[CD-Manual]]
 **Voraussetzung:** [[Wave-3]] abgeschlossen
+
+## Ergebnis (2026-05-30)
+
+Gesamturteil **abnahmefaehig**, keine Blocker (2 Agenten: `wave4-fix` Code,
+`wave4-verify` Abnahme).
+
+- **#18 StatFigure-Kontrast:** `tone`-Prop ('muted'|'inherit'); StatsBar nutzt
+  gedimmten Papierweiss (`rgba(244,241,234,0.72)`). Label **3.16 -> 8.35:1 (AAA)**.
+- **#19 Build/Audit:** `lint`/`build`/`tsc` gruen, 27 Routen. 60/30/10 ✅ (Rot
+  nur Signal). A11y: alle CD-Kombis AA bzw. Large-Text-AA (Rot/Anthrazit nur
+  fuer >=30px Display). Typo ✅ (nur Archivo + IBM Plex Mono). Responsive ✅
+  (Wordmark minWidth 120 + Blocksatz @390px).
+- **#20 Visuell:** 8 Screenshots (Desktop 1366 + Mobile 390), alle 4 Key-Pages
+  Manual-konform. **Karriere = Anthrazit, kein Gelb** (Fix bestaetigt). HTTP 200
+  auf allen 6 Marketing-Routen.
+
+### Offene Mini-Hinweise (nicht-blockierend, Backlog)
+
+1. **StatsBar zeigt "0" im fullPage-Screenshot** — Count-up ist scroll-getriggert
+   (IntersectionObserver), feuert im synthetischen Shot nicht. Kein Defekt.
+2. **Karriere-Button "Initiativbewerbung" `borderRadius:8`** statt DS-`4px`
+   (`--radius-*`). Pre-existing Mikro-Inkonsistenz, optionaler Folge-Fix.
+3. **`companySubline`** in site-config weiterhin offen (Wordmark leitet ab).
 
 ## Zweck
 

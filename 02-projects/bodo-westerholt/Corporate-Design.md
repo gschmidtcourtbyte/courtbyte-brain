@@ -3,7 +3,19 @@
 **Stand:** 2026-05-29
 **Wirkt auf:** `frontend/lib/theme.ts`, `frontend/lib/site-config.ts`,
 `frontend/app/globals.css`, `frontend/components/`
-**Verbunden mit:** [[Projektplan]], [[Iteration-1]]
+**Verbunden mit:** [[Projektplan]], [[Iteration-1]], [[CD-Manual]]
+
+> **⚠️ Teilweise ueberholt (2026-05-30):** Das gelieferte [[CD-Manual]]
+> (Ausgabe 01/2026) ist die **verbindliche** Marken-Referenz. Wo dieses Dokument
+> abweicht, gilt das Manual. Konkret ueberholt und in [[Iteration-2]] umgesetzt:
+> - **Typografie:** Archivo (statt Big Shoulders + DM Sans) + IBM Plex Mono
+>   (statt JetBrains Mono) — siehe Abschnitt unten, der Rest dieses Dokuments
+>   ist noch nicht nachgezogen.
+> - **Akzentfarbe:** strikt Rot + Anthrazit; **Baustellen-Gelb entfernt**
+>   (`accent` = Anthrazit `#1C1C1A`). Gelb nur noch funktional (Warnschutz).
+>
+> Aesthetik-Richtung (Industrial-Editorial), Bildsprache und Ikonografie bleiben
+> gueltig.
 
 ## Brand-Anker
 
@@ -68,11 +80,15 @@ danach aussehen - nicht nach Consulting-Stockphoto. Konsequente Form-Sprache:
 
 ## Typografie
 
+> **Ueberholt durch [[CD-Manual]] (umgesetzt in [[Iteration-2]]):** Display +
+> Body = **Archivo** (eine Familie, 400-900 + italic); Mono = **IBM Plex Mono**
+> (400/500/600). Die Tabelle unten ist der historische Interim-Stand.
+
 | Rolle | Schrift | Quelle | Einsatz |
 |---|---|---|---|
-| Display | **Big Shoulders Display** (700/900) | Google Fonts | Hero-Headlines, Section-Titel, Stat-Zahlen |
-| Body | **DM Sans** (400/500/700) | Google Fonts | Fliesstext, Subheadlines, UI |
-| Mono | **JetBrains Mono** (500/700) | Google Fonts | Projekt-Codes, Daten, Masse, technische Labels |
+| Display | ~~Big Shoulders Display~~ → **Archivo Black/italic** | Google Fonts | Hero-Headlines, Section-Titel, Stat-Zahlen, Wortmarke |
+| Body | ~~DM Sans~~ → **Archivo** (400/500) | Google Fonts | Fliesstext, Subheadlines, UI |
+| Mono | ~~JetBrains Mono~~ → **IBM Plex Mono** | Google Fonts | Projekt-Codes, Daten, Masse, technische Labels |
 
 Big Shoulders Display ist kondensiert und engineered - fuehlt sich an wie
 gestanzte Metallschilder auf der Baustelle. DM Sans bleibt fuer Lesbarkeit
@@ -116,7 +132,7 @@ DARK (Default)
   text        #F5F3EE   Papier
   textMuted   #8C8C88   Grau-mittel
   primary     #D81F26   Signal-Rot (Akzent-Rolle)
-  accent      #F2C200   Baustellen-Gelb (sehr sparsam)
+  accent      #1C1C1A   Anthrazit  (Gelb #F2C200 entfernt — CD-Manual)
   footerBg    #0B0B0A
   footerText  #8C8C88
 
